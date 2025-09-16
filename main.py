@@ -16,8 +16,10 @@ cup_choice = input("Would you like a reusable cup for £1.00 extra? (yes/no): ")
 
 # TODO: Calculate the total cost (each smoothie costs £3.50)
 cost_per_smoothie = 3.50
-cup_cost = 1.00 if cup_choice.lower() == 'yes' 
-else 0.00
+if cup_choice.lower() == 'yes':
+    cup_cost = 1.00 
+else:
+    0.00
 
 total_cost = smoothies_int * cost_per_smoothie + cup_cost
 
