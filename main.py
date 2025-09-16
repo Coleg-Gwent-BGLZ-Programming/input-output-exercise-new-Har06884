@@ -1,35 +1,27 @@
 # Starter file for the Smoothie Shop Calculator exercise
 
 print("Welcome to the Smoothie Shop!")
+ # TODO: Ask the user for their name using input()
+name = input("what is your name ")
+ 
+ # TODO: Ask how many smoothies they want to buy
+smoothies_str = input("how many smoothies would you want to buy ")
+ 
+ # TODO: Convert the number of smoothies to an integer
+smoothies_int = int(smoothies_str)
 
-# Ask the user for their name using input()
-name = input("What is your name? ")
-
-#  Ask how many smoothies they want to buy
-smoothies = input("How many smoothies would you like to buy? ")
-
-# Convert the number of smoothies to an integer
-smoothies_int = int(smoothies)
-
-# Calculate the total cost (each smoothie costs £3.50)
-total_cost = smoothies_int * cost_per_smoothie
-
-# Display a message using a formatted string
-print(f"Thank you, {name}! Your total for {smoothies_int} smoothies is £{total_cost:.2f}.")
-
+ # TODO: Calculate the total cost (each smoothie costs £3.50)
+cost = 3.50
+total_cost = smoothies_int * cost
+ # TODO: Display a message using a formatted string
+print(f"Thank you, {name } your total is {total_cost } enjoy your smoothies")
 
 # OPTIONAL CHALLENGE:
-# Ask if the customer wants a reusable cup for £1.00 extra
-# Add the cost if they say yes
-# Ask if the customer wants a reusable cup
-cup_choice = input("Would you like a reusable cup for £1.00 extra? (yes/no): ")
+ # Ask if the customer wants a reusable cup for £1.00 extra
 
-# Calculate the total cost (each smoothie costs £3.50)
-cost_per_smoothie = 3.50
-if cup_choice.lower() == 'yes':
-    cup_cost = 1.00 
+extra = input("would you like a reusable cup for an extra £1.00 ")
+if extra == "yes":
+ total_cost += 1.00
 else:
-    0.00
-
-total_cost = smoothies_int * cost_per_smoothie + cup_cost
-print(f"Thank you, {name}! Your total for {smoothies_int} smoothies is £{total_cost:.2f}.")
+    print ("no cup added ")
+print (f" your total is {total_cost}")
